@@ -7,6 +7,7 @@ function App() {
         windi css
       </p>
 
+
       <p className="font-bold">hello world</p>
     </div>
   )
