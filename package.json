@@ -11,6 +11,16 @@
     "lint:style": "stylelint --fix \"src/**/*.{css,scss}\"",
     "postinstall": "husky install"
   },
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts,json}": [
+      "npm run lint:script",
+      "git add --force"
+    ],
+    "**/*.{scss}": [
+      "npm run lint:style",
+      "git add --force"
+    ]
+  },
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -32,6 +42,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
     "prettier": "^2.6.2",
     "sass": "^1.50.0",
     "stylelint": "^14.6.1",
