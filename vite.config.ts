@@ -37,5 +37,10 @@ export default defineConfig({
         additionalData: `@import "${variablePath}";`
       }
     }
+  },
+  resolve: {
+    alias: {
+      '@assets': path.join(__dirname, 'src/assets/imgs')
+    }
   }
 })
