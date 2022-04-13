@@ -42,5 +42,11 @@ export default defineConfig({
     alias: {
       '@assets': path.join(__dirname, 'src/assets/imgs')
     }
+  },
+  optimizeDeps: {
+    include: [
+      // 按需加载的依赖都可以声明到这个数组里
+      'object-assign'
+    ]
   }
 })
